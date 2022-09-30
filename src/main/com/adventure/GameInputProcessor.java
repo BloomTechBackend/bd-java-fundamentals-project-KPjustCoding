@@ -1,10 +1,9 @@
 package main.com.adventure;
 
-import com.google.common.base.Utf8;
+
 import main.com.adventure.settings.Command;
 import main.com.adventure.settings.CommandConstants;
 
-import java.nio.charset.Charset;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -68,11 +67,10 @@ public class GameInputProcessor {
         try {
             verb = input.substring(0, input.indexOf(" "));
             object = input.substring(input.indexOf(" ") + 1);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             verb = input;
-            object = "";}
-
+            object = "";
+        }
         return new Command(verb, object);
     }
 
