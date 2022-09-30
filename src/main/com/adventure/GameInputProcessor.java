@@ -62,10 +62,17 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and object
      */
     private Command buildCommandWithObject(String input) {
+            String verb;
+            String object;
 
-        String verb = input.substring(0, input.indexOf(" "));
-        String object = input.substring(input.indexOf(" ") + 1);
-
+        try {
+            verb = input.substring(0, input.indexOf(" "));
+            object = input.substring(input.indexOf(" ") + 1);
+        }
+        catch(Exception e){
+            verb = input;
+            object = "";
+        }
 
         return new Command(verb, object);
     }
