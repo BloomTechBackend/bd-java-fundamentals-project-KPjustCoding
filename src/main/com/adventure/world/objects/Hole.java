@@ -24,7 +24,7 @@ public class Hole {
     public void dig() {
         //TODO this function should update HoleContent's isCovered property.
         this.holeContent.setIsCovered(false);
-        this.holeContent.getKey();
+
 
 
     }
