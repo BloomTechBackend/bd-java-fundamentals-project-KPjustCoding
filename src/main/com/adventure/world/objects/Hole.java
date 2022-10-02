@@ -25,8 +25,6 @@ public class Hole {
         //TODO this function should update HoleContent's isCovered property.
         this.holeContent.setIsCovered(false);
 
-
-
     }
 
     /**
