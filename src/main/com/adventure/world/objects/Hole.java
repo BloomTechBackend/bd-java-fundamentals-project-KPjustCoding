@@ -9,7 +9,7 @@ public class Hole {
      * @param content - the item that is covered by the hole.
      */
     public Hole(Key content) {
-       this.holeContent = new HoleContent(content);
+        this.holeContent = new HoleContent(content);
 
     }
 
@@ -38,14 +38,14 @@ public class Hole {
             return null;
         }
     }
-        //TODO Get the HoleContent's content only if the hole is uncovered.
+    //TODO Get the HoleContent's content only if the hole is uncovered.
 
 
     /**
      * If the HoleContent is uncovered, return the content. Otherwise, return null.
      * @return - the content if the hole is uncovered.
      */
-    public Tangible getContent(){
+    public Tangible getContent() {
         return getKeyIfPossible();
     }
 }
