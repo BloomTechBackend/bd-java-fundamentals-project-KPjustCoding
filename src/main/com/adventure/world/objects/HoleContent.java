@@ -8,8 +8,9 @@ public class HoleContent {
     private boolean isCovered = true;
 
     /**
-    *
+    * @param key from hole()
      */
+
     public HoleContent(Key key) {
         this.content = key;
     }
