@@ -7,15 +7,15 @@ public class HoleContent {
     private Key content;
     private boolean isCovered = true;
 
-    public HoleContent(Key key){
+    public HoleContent(Key key) {
         this.content = key;
     }
 
-    public void setIsCovered(boolean isCovered){
+    public void setIsCovered(boolean isCovered) {
         this.isCovered = isCovered;
     }
 
-    public boolean isCovered(){
+    public boolean isCovered() {
         return this.isCovered;
     }
 
