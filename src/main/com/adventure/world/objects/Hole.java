@@ -32,10 +32,12 @@ public class Hole {
      * @return the key if the hole is uncovered.
      */
     private Key getKeyIfPossible() {
-        if (!this.holeContent.isCovered())
+        if (!this.holeContent.isCovered()) {
             return this.holeContent.getKey();
-        else return null;
+        } else {
+            return null;
         }
+    }
         //TODO Get the HoleContent's content only if the hole is uncovered.
 
 
@@ -43,8 +45,7 @@ public class Hole {
      * If the HoleContent is uncovered, return the content. Otherwise, return null.
      * @return - the content if the hole is uncovered.
      */
-    public Tangible getContent() {
+    public Tangible getContent(){
         return getKeyIfPossible();
-
     }
 }

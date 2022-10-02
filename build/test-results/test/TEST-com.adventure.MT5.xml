@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.adventure.MT5" tests="2" skipped="0" failures="1" errors="0" timestamp="2022-10-02T16:20:49" hostname="DESKTOP-JFA7LEF" time="0.051">
+<testsuite name="com.adventure.MT5" tests="2" skipped="0" failures="1" errors="0" timestamp="2022-10-02T17:23:37" hostname="DESKTOP-JFA7LEF" time="0.063">
   <properties/>
-  <testcase name="testScene()" classname="com.adventure.MT5" time="0.048">
+  <testcase name="testScene()" classname="com.adventure.MT5" time="0.058">
     <failure message="org.opentest4j.AssertionFailedError: expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: not &lt;null&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -102,7 +102,7 @@
 	at java.base/java.lang.Thread.run(Thread.java:829)
 </failure>
   </testcase>
-  <testcase name="testHole()" classname="com.adventure.MT5" time="0.002"/>
+  <testcase name="testHole()" classname="com.adventure.MT5" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
