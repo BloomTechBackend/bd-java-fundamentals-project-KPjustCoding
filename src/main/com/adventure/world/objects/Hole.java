@@ -23,7 +23,7 @@ public class Hole {
      */
     public void dig() {
         //TODO this function should update HoleContent's isCovered property.
-        holeContent.setIsCovered(false);
+        this.holeContent.setIsCovered(false);
 
     }
 
@@ -46,6 +46,13 @@ public class Hole {
      * @return - the content if the hole is uncovered.
      */
     public Tangible getContent() {
+
         return getKeyIfPossible();
+        if (!this.holeContent.isCovered()) {
+            return getKeyIfPossible();
+        } else {
+            return null;
+        }
+
     }
 }

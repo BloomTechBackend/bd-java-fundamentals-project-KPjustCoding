@@ -8,9 +8,15 @@ public class HoleContent {
     private boolean isCovered = true;
 
     /**
+<<<<<<< HEAD
     * @param key from hole()
      */
 
+=======
+     * This is my required Java Doc.
+     * @param key Key passed from hole
+     */
+>>>>>>> mastery6
     public HoleContent(Key key) {
         this.content = key;
     }
