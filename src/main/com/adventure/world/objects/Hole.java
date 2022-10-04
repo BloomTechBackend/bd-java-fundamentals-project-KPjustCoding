@@ -46,8 +46,6 @@ public class Hole {
      * @return - the content if the hole is uncovered.
      */
     public Tangible getContent() {
-
-        return getKeyIfPossible();
         if (!this.holeContent.isCovered()) {
             return getKeyIfPossible();
         } else {
