@@ -7,6 +7,10 @@ public class HoleContent {
     private Key content;
     private boolean isCovered = true;
 
+    /**
+     * This is my required Java Doc.
+     * @param key Key passed from hole
+     */
     public HoleContent(Key key) {
         this.content = key;
     }

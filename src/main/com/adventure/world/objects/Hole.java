@@ -9,7 +9,7 @@ public class Hole {
      * @param content - the item that is covered by the hole.
      */
     public Hole(Key content) {
-       this.holeContent = new HoleContent(content);
+        this.holeContent = new HoleContent(content);
 
     }
 
@@ -34,9 +34,11 @@ public class Hole {
     private Key getKeyIfPossible() {
         if (!this.holeContent.isCovered()) {
             return this.holeContent.getKey();
-        } else return null;
+        } else {
+            return null;
         }
-        //TODO Get the HoleContent's content only if the hole is uncovered.
+    }
+    //TODO Get the HoleContent's content only if the hole is uncovered.
 
 
     /**
@@ -46,7 +48,8 @@ public class Hole {
     public Tangible getContent() {
         if (!this.holeContent.isCovered()) {
             return getKeyIfPossible();
-        }else return null;
-
+        } else {
+            return null;
+        }
     }
 }

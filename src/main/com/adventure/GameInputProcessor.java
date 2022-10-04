@@ -3,6 +3,7 @@ package main.com.adventure;
 
 import main.com.adventure.settings.Command;
 import main.com.adventure.settings.CommandConstants;
+import main.com.adventure.settings.CommandVerb;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -33,12 +34,10 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and blank object
      */
     private Command buildSimpleCommand(String input) {
-
-        String verb = input.substring(0, input.indexOf(" "));
+        String verb = input;
         String object =  "";
 
-
-        return new Command(verb, object);
+        return new Command(CommandVerb.getVerb(verb), object);
     }
 
     /**
@@ -61,17 +60,12 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and object
      */
     private Command buildCommandWithObject(String input) {
-        String verb;
-        String object;
 
-        try {
-            verb = input.substring(0, input.indexOf(" "));
-            object = input.substring(input.indexOf(" ") + 1);
-        } catch (Exception e) {
-            verb = input;
-            object = "";
-        }
-        return new Command(verb, object);
+        int i = input.indexOf(" ");
+        String verb = input.substring(0, i);
+        String object = input.substring(i + 1);
+
+        return new Command(CommandVerb.getVerb(verb), object);
     }
 
 

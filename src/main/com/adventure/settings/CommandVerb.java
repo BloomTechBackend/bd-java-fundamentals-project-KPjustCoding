@@ -26,7 +26,41 @@ public enum CommandVerb {
      * @return - the CommandVerb associated with the given input.
      */
     public static CommandVerb getVerb(String verbString) {
-        return INVALID;
+
+        String command = "INVALID";
+
+        if (verbString.equalsIgnoreCase("take")) {
+            command = "TAKE";
+        }
+        if (verbString.equalsIgnoreCase("move")) {
+            command = "MOVE";
+        }
+        if (verbString.equalsIgnoreCase("use")) {
+            command = "USE";
+        }
+        if (verbString.equalsIgnoreCase("dig")) {
+            command = "DIG";
+        }
+        if (verbString.equalsIgnoreCase("examine")) {
+            command = "EXAMINE";
+        }
+        if (verbString.equalsIgnoreCase("look")) {
+            command = "LOOK";
+        }
+        if (verbString.equalsIgnoreCase("help")) {
+            command = "HELP";
+        }
+        if (verbString.equalsIgnoreCase("fight")) {
+            command = "FIGHT";
+        }
+        if (verbString.equalsIgnoreCase("inventory")) {
+            command = "INVENTORY";
+        }
+        if (verbString.equalsIgnoreCase("move")) {
+            command = "MOVE";
+        }
+
+        return CommandVerb.valueOf(command);
     }
 
 }
