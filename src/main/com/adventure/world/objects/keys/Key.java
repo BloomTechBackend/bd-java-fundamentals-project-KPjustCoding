@@ -27,6 +27,10 @@ public class Key implements Tangible {
      */
     public Key() {
         //Add default (i.e. no params) constructor here
+        this.name = "key";
+        this.level = 1;
+
+
     }
 
     /**
@@ -36,6 +40,7 @@ public class Key implements Tangible {
     public Key(int level) {
         //add constructor that takes a level, and saves it
         this.level = level;
+        this.name = "key";
     }
 
 
@@ -52,7 +57,6 @@ public class Key implements Tangible {
 
     public int getLevel() {
         //ix this so it references the level property instead of 0
-
         return this.level;
     }
 
