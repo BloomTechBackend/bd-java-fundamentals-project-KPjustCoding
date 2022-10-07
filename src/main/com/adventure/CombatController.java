@@ -38,14 +38,17 @@ public class CombatController {
                 break;
             }
             playersHealth -= monstersPower;
-            if (playersHealth <= 0 ){
+            if (playersHealth <= 0) {
                 this.player.setHealth(playersHealth);
                 isDead = true;
             }
         }
     }
 
-
+    /**
+     * Checking Players Health to determine if player was defeated.
+     * @return Returns a boolean, if the players health hit 0 or below.
+     */
     public boolean isPlayerDefeated() {
         boolean isDefeated = false;
         if (this.player.getHealth() <= 0) {
@@ -58,8 +61,8 @@ public class CombatController {
      * Resets the health of the monster and player back to 10.
      */
     public void reset() {
-    this.player.setHealth(10);
-    this.monster.setHealth(10);
+        this.player.setHealth(10);
+        this.monster.setHealth(10);
 
     }
 }
