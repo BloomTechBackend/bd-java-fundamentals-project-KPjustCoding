@@ -24,25 +24,25 @@ public class CombatController {
      */
     public void autosimulateCombat() {
 
-        // Player Health
-        // Monsters Health
-        // Players Power
-        // Monsters Health
-
         int playersHealth = this.player.getHealth();
         int monstersHealth = this.monster.getHealth();
         int playersPower = this.player.getPower();
         int monstersPower = this.monster.getPower();
 
-        while (playersHealth >= 0 && monstersHealth >= 0) {
+        boolean isDead = false;
+
+        while (!isDead) {
             monstersHealth -= playersPower;
-            this.monster.setHealth(monstersHealth);
             if (monstersHealth <= 0) {
+                this.monster.setHealth(monstersHealth);
                 break;
             }
             playersHealth -= monstersPower;
-            this.player.setHealth(playersHealth);
+            if (playersHealth <= 0 ){
+                this.player.setHealth(playersHealth);
+                isDead = true;
             }
+        }
     }
 
 
