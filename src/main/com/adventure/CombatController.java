@@ -24,16 +24,42 @@ public class CombatController {
      */
     public void autosimulateCombat() {
 
+        // Player Health
+        // Monsters Health
+        // Players Power
+        // Monsters Health
+
+        int playersHealth = this.player.getHealth();
+        int monstersHealth = this.monster.getHealth();
+        int playersPower = this.player.getPower();
+        int monstersPower = this.monster.getPower();
+
+        while (playersHealth >= 0 && monstersHealth >= 0) {
+            monstersHealth -= playersPower;
+            this.monster.setHealth(monstersHealth);
+            if (monstersHealth <= 0) {
+                break;
+            }
+            playersHealth -= monstersPower;
+            this.player.setHealth(playersHealth);
+            }
     }
 
+
     public boolean isPlayerDefeated() {
-        return false;
+        boolean isDefeated = false;
+        if (this.player.getHealth() <= 0) {
+            isDefeated = true;
+        }
+        return isDefeated;
     }
 
     /**
      * Resets the health of the monster and player back to 10.
      */
     public void reset() {
+    this.player.setHealth(10);
+    this.monster.setHealth(10);
 
     }
 }
