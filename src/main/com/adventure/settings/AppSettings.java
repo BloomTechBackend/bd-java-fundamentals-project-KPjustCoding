@@ -4,7 +4,7 @@ public class AppSettings {
 
     /** You will update this property for each project. **/
 
-    public static final Story story = Story.MT5_DigEscape;
+    public static final Story story = Story.MT7_MonsterScene;
 
 
     public enum Story {
