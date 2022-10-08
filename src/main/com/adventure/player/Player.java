@@ -10,8 +10,11 @@ public class Player {
 
     public int level = 5;
     private int currentLocationIndex = AppSettings.getStartingLocation();
-    private Key key;
-    private Shovel shovel;
+    //private Key key;
+    //private Shovel shovel;
+
+    private Backpack backpack;
+
     private int power = 1;
     private int health = 10;
 
@@ -113,7 +116,8 @@ public class Player {
      */
     public Tangible getItem(String itemName) {
         //TODO Complete this function in Sprint 3 Module 3
-        return null;
+
+        return backpack.getItem(itemName);
     }
 
     /**
@@ -124,7 +128,8 @@ public class Player {
      */
     public Tangible removeItem(Tangible item) {
         //TODO Complete this function in Sprint 3 Module 3
-        return null;
+        this.backpack.removeItem(item);
+        return item;
     }
 
     /**
@@ -133,6 +138,7 @@ public class Player {
      */
     public void printItems() {
         //TODO Complete this function in Sprint 3 Module 3
+        this.backpack.printItems();
     }
 
     /**
@@ -142,22 +148,22 @@ public class Player {
      */
     public void addItem(Tangible item) {
         //TODO Complete this function
+        this.backpack.addItem(item);
     }
 
     public void setKey(Key item) {
-        key = item;
+        this.backpack.addItem(item);
     }
 
-    public Key getKey() {
-        return key;
-    }
+    public Key getKey(String key) {
+        return (Key) this.backpack.getItem(key);    }
 
     public void setShovel(Shovel item) {
-        shovel = item;
+        this.backpack.addItem(item);
     }
 
-    public Shovel getShovel() {
-        return shovel;
+    public Shovel getShovel(String shovel) {
+        return (Shovel) this.backpack.getItem(shovel);
     }
 
     //////// DON'T CHANGE THE CODE BELOW. ///////////

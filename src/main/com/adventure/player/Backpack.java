@@ -18,6 +18,13 @@ public class Backpack {
      */
     public boolean addItem(Tangible item) {
         //TODO Complete the function
+
+        for (int i = 0; i < items.length; i++){
+            if (this.items[i] == null) {
+                this.items[i] = item;
+                return true;
+            }
+        }
         return false;
     }
 
@@ -26,8 +33,15 @@ public class Backpack {
      * @param name - the name of the item to search for.
      * @return - the item if it exists. Otherwise, null.
      */
+
     public Tangible getItem(String name) {
         //TODO Complete the function
+
+        for (int i = 0; i < items.length; i++) {
+            if (String.valueOf(this.items[i]).equalsIgnoreCase(name)) {
+                return this.items[i];
+            }
+        }
         return null;
     }
 
@@ -38,6 +52,13 @@ public class Backpack {
      */
     public boolean removeItem(Tangible item) {
         //TODO Complete the function
+
+        for (int i = 0; i < this.items.length; i++) {
+            if (this.items[i] == item) {
+                this.items[i] = null;
+                return true;
+            }
+        }
         return false;
     }
 
@@ -51,5 +72,10 @@ public class Backpack {
      */
     public void printItems() {
         //TODO Complete the function
+        System.out.println("Here are the items in your backpack:");
+        for (int i = 0; i < this.items.length; i++) {
+            System.out.print(" - " + this.items[i]);
+        }
+
     }
 }

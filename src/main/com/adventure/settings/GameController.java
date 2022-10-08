@@ -104,9 +104,9 @@ public class GameController {
             return player.getItem(itemName);
         }
         if (itemName.equalsIgnoreCase("key")) {
-            return player.getKey();
+            return player.getKey(itemName);
         } else if (itemName.equalsIgnoreCase("shovel")) {
-            return player.getShovel();
+            return player.getShovel(itemName);
         }
         return null;
     }
@@ -144,6 +144,8 @@ public class GameController {
             case TAKE:
                 take(command.getObjectName());
                 break;
+            case INVENTORY:
+                player.printItems();
             default:
                 printInvalidCommand();
                 break;
@@ -170,7 +172,7 @@ public class GameController {
     }
 
     private void dig() {
-        if (player.getShovel() != null) {
+        if (player.getShovel("shovel") != null) {
             getCurrentScene().dig();
             describeCurrentScene();
         } else {
