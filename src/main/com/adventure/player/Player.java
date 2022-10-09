@@ -10,15 +10,14 @@ public class Player {
 
     public int level = 5;
     private int currentLocationIndex = AppSettings.getStartingLocation();
-    //private Key key;
-    //private Shovel shovel;
 
-    private Backpack backpack;
+    private Backpack backpack = new Backpack();
 
     private int power = 1;
     private int health = 10;
 
     private String name;
+
 
     /**
      * Sprint 2 Module 1
@@ -151,17 +150,35 @@ public class Player {
         this.backpack.addItem(item);
     }
 
+    /**
+     * Adds item to backpack.
+     * @param item - item sent to backpack
+     */
     public void setKey(Key item) {
         this.backpack.addItem(item);
     }
 
+    /**
+     *
+     * @param key string value of key.
+     * @return returns the key item from backpack
+     */
     public Key getKey(String key) {
         return (Key) this.backpack.getItem(key);    }
 
+    /**
+     * sets item as shovel.
+     * @param item item is a shovel
+     */
     public void setShovel(Shovel item) {
         this.backpack.addItem(item);
     }
 
+    /**
+     * returns a shovel.
+     * @param shovel item from shovels
+     * @return returns the shovel from backpack
+     */
     public Shovel getShovel(String shovel) {
         return (Shovel) this.backpack.getItem(shovel);
     }

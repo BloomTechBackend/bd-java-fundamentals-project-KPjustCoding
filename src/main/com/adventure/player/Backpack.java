@@ -13,13 +13,14 @@ public class Backpack {
 
     /**
      * Adds an item to the backpack array only if there's an empty space in the array.
+     *
      * @param item - item to add to the backpack array.
      * @return - true if the item is added. Otherwise, false.
      */
     public boolean addItem(Tangible item) {
         //TODO Complete the function
 
-        for (int i = 0; i < items.length; i++){
+        for (int i = 0; i < items.length; i++) {
             if (this.items[i] == null) {
                 this.items[i] = item;
                 return true;
@@ -30,17 +31,23 @@ public class Backpack {
 
     /**
      * Checks each backpack item's name to see if it matches the given name.
+     *
      * @param name - the name of the item to search for.
      * @return - the item if it exists. Otherwise, null.
      */
 
+
     public Tangible getItem(String name) {
         //TODO Complete the function
 
-        for (int i = 0; i < items.length; i++) {
-            if (String.valueOf(this.items[i]).equalsIgnoreCase(name)) {
-                return this.items[i];
+        try {
+            for (Tangible item : items) {
+                if (item.getName().equalsIgnoreCase(name)) {
+                    return item;
+                }
             }
+        } catch (Exception ignored) {
+            System.out.println("That item was not found.");
         }
         return null;
     }
