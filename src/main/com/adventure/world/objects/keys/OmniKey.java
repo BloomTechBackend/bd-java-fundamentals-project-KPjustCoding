@@ -32,7 +32,6 @@ public class OmniKey implements Tangible {
 
             for (int i = 0; i < pins.length; i++) {
                 int index = ((OmniDoor) door).getFirstWrongPin(testKey);
-                System.out.println(index);
                 if (index != -1) {
                     pins[index] = !pins[index];
                     testKey.pins[index] = this.pins[index];
