@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.adventure.MT9" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-10T00:11:59" hostname="DESKTOP-JFA7LEF" time="0.043">
+<testsuite name="com.adventure.MT9" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-10T01:55:57" hostname="DESKTOP-JFA7LEF" time="0.046">
   <properties/>
-  <testcase name="testOmniDoorKey()" classname="com.adventure.MT9" time="0.043"/>
-  <system-out><![CDATA[The door is unlocked!
+  <testcase name="testOmniDoorKey()" classname="com.adventure.MT9" time="0.046"/>
+  <system-out><![CDATA[2
+-1
+-1
+-1
+-1
+The door is unlocked!
 The door is unlocked!
 The door is unlocked!
 The door is unlocked!
